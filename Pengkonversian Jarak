@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float jarakKm, jarakM, jarakCm;
+    printf("\n==================================================");
+    printf("\n           Mengkonversikan Jarak              ");
+    printf("\n==================================================");
+
+    printf("\nJarak dalam satuan kilometer (km): ");
+    scanf("%f", &jarakKm);
+
+    jarakM = jarakKm * 1000; // 1 km = 1000 m
+    jarakCm = jarakM * 100;  // 1 m = 100 cm
+
+    printf("Hasil konversi:\n");
+    printf("%.2f kilometer = %.2f meter\n", jarakKm, jarakM);
+    printf("%.2f kilometer = %.2f sentimeter\n", jarakKm, jarakCm);
+
+    // Menunggu penekanan tombol Enter sebelum program selesai
+    printf("\nTekan tombol Enter untuk keluar...");
+    getchar(); // Membuang karakter Enter sebelumnya
+    getchar(); // Menunggu penekanan tombol Enter
+    printf("\n============= Terimakasih =============");
+    return 0;
+}
