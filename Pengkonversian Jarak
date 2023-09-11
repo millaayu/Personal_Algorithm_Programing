@@ -4,7 +4,7 @@ int main() {
     float jarakKm, jarakM, jarakCm;
     printf("\n==================================================");
     printf("\n           Mengkonversikan Jarak              ");
-    printf("\n==================================================");
+    printf("\n==================================================\n");
 
     printf("\nJarak dalam satuan kilometer (km): ");
     scanf("%f", &jarakKm);
