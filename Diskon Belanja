@@ -1,0 +1,51 @@
+#include <stdio.h>
+int main(){
+    char pengulangan='y';
+    int i=0;
+    unsigned int subtotal=0, total=0, totaltanpadiskon=0, diskonnominal=0, diskontransaksi=0;  //4 miliar max
+    printf("\n=================================================");
+    printf("\n      PROGRAM PENGHITUNGAN DISKON BELANJA      ");
+    printf("\n=================================================\n");
+    while(pengulangan != 'n' && pengulangan != 'N') {
+        i++;
+    
+    printf("\nMasukkan nominal transaksi %d : Rp.", i);
+    scanf(" %u",&subtotal);
+    totaltanpadiskon=totaltanpadiskon+subtotal;
+        if(subtotal>=1000000){
+        printf("selamat anda mendapatkan diskon 30%% senilai Rp.%u\n", subtotal * 3 / 10);
+        diskonnominal=diskonnominal+subtotal * 3/10;
+        subtotal = subtotal * 7 /10;
+        } else if (subtotal>=500000) {
+        printf("selamat anda mendapatkan diskon 20%% senilai Rp.%u\n", subtotal * 2 / 10);
+        diskonnominal=diskonnominal+subtotal * 2/10;
+        subtotal = subtotal * 8 /10;
+    } else if (subtotal>=200000) {
+        printf("selamat anda mendapatkan diskon 10%% senilai Rp.%u\n", subtotal * 1 / 10);
+        diskonnominal=diskonnominal+subtotal * 1/10;
+                subtotal = subtotal * 9 /10;
+    }
+     if(i%4 == 0) {
+        printf("Selamat anda mendapatkan diskon tambahan 20%% senilai Rp.%u\n", subtotal * 2 / 10);
+        diskontransaksi = diskontransaksi + subtotal * 2/10;
+            subtotal = subtotal * 8 / 10;
+     }
+    printf("Apakah anda ingin berbelanja kembali?\n");
+    scanf(" %c", &pengulangan);
+    while(pengulangan != 'y' && pengulangan != 'Y' && pengulangan != 'n' && pengulangan != 'N'){
+    printf("Apakah anda ingin berbelanja kembali?\n");
+    scanf(" %c", &pengulangan);
+    }
+    total += subtotal;
+    
+    // Output garis pemisah
+    printf("\n=================================================");
+    }
+    printf("\nDetail Transaksi :\n");
+    printf("\nSebelum mendapatkan diskon : %u \n", totaltanpadiskon);
+    printf("Total diskon dari nominal belanja: %u \n", diskonnominal);
+    printf("Total diskon dari banyaknya transaksi: %u \n", diskontransaksi);
+    printf("Total :%u \n", total);
+    printf("\n====== Terimakasih Sudah Berbelanja Disini ======");
+    return 0;
+}
