@@ -13,15 +13,15 @@ int main(){
     scanf(" %u",&subtotal);
     totaltanpadiskon=totaltanpadiskon+subtotal;
         if(subtotal>=1000000){
-        printf("selamat anda mendapatkan diskon 30%% senilai Rp.%u\n", subtotal * 3 / 10);
+        printf("Selamat anda mendapatkan diskon 30%% senilai Rp.%u\n", subtotal * 3 / 10);
         diskonnominal=diskonnominal+subtotal * 3/10;
         subtotal = subtotal * 7 /10;
         } else if (subtotal>=500000) {
-        printf("selamat anda mendapatkan diskon 20%% senilai Rp.%u\n", subtotal * 2 / 10);
+        printf("Selamat anda mendapatkan diskon 20%% senilai Rp.%u\n", subtotal * 2 / 10);
         diskonnominal=diskonnominal+subtotal * 2/10;
         subtotal = subtotal * 8 /10;
     } else if (subtotal>=200000) {
-        printf("selamat anda mendapatkan diskon 10%% senilai Rp.%u\n", subtotal * 1 / 10);
+        printf("Selamat anda mendapatkan diskon 10%% senilai Rp.%u\n", subtotal * 1 / 10);
         diskonnominal=diskonnominal+subtotal * 1/10;
                 subtotal = subtotal * 9 /10;
     }
